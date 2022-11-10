@@ -5,7 +5,7 @@ const PORT = 3000;
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', { name: 'Peter'});
+    res.render('index.ejs', { name: 'William'});
 });
 
 const mealsRouter = require('./routes/meals')

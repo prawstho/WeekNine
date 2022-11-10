@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 // app.post   //CREATE html
-// app.get    //READ
+// app.get    //READ html
 // app.put    //UPDATE
 // app.patch  //UPDATE 
 // app.delete //DELETE
