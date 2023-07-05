@@ -23,7 +23,7 @@ app.get('/user/:id', (req, res) => { // dynamic route
   res.send(`the id is ${req.params.id}`)
 });
 
-const mealsRouter = require('./routes/meals')
+const mealsRouter = require('./routes/meals.js')
 app.use('/meals', mealsRouter);
 
 app.use((req, res) => {
