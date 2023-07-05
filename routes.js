@@ -8,7 +8,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (request, response) => {
-    response.render('index')
+    response.render('index',{ name: 'Easter Bunny', title: 'HOME'})
 })
 app.get('/about', (request, response) => {
     response.render('about');

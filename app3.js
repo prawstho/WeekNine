@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { name: 'William'});
 });
 
 app.get('/about', (req, res) => {
