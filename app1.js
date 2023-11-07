@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {name: 'Darth Vader'});
 });
 
 app.get('/about', (req, res, next) => {

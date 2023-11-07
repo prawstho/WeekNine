@@ -10,14 +10,14 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {name: 'Wilber'});
 });
 
 app.get('/new', (req, res) => { // static route
     res.send(`the route is /new.`)
 });
 
-app.get('/:id', (req, res) => { // dynamic route
+app.get('/customer/:id', (req, res) => { // dynamic route
     res.send(`the id is ${req.params.id}`)
 });
 

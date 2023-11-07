@@ -25,6 +25,12 @@ router.get('/dinner', family, party, (req, res) => {
     res.end();
 });
 
+router.get('/supper', party, (req, res) => {
+    res.write('Water. ');
+    res.write('Soup and crackers.');
+    res.end();
+});
+
 router.get('/party', (req, res) => {
     // array with mock data for testing and UI development
     const friends = [
@@ -32,7 +38,7 @@ router.get('/party', (req, res) => {
         {friend_id: '2', title: 'Ms.', birth_year: '2006', rating: 'PG', name: 'Satnam Purewal'},
         {friend_id: '3', title: 'Mr.', birth_year: '2017', rating: 'R', name: 'Jake Forgotten'}
     ];
-        res.render('party',{friends});
+        res.render('party.ejs',{friends});
     });
 
 function family(req, res, next) {

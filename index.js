@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
 const mealsRouter = require('./routes/meals')
 app.use('/meals', mealsRouter);
 
+const shoppingRouter = require('./routes/shopping')
+app.use('/shopping', shoppingRouter);
+
 app.use((req, res) => {
     res.status(404).render('fourohfour');
 });
