@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 const PORT = 3000;
@@ -10,8 +11,13 @@ app.listen(PORT, () => {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index', {name: 'Darth Vader'});
+    res.render('index.ejs', {name: 'Darth Vader'});
 });
+
+app.get('/test', (request, response) => {
+//    const filePath = path.join(__dirname, 'views/test.html');
+    response.render('test.ejs')
+})
 
 app.get('/about', (req, res, next) => {
     res.render('about');

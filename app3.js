@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.render('index', { name: 'William'});
 });
 
+app.get('/about/:id', (req, res) => { // dynamic route​
+    res.send(`the id is ${req.params.id}`)
+});
+
 app.get('/about', (req, res) => {
     res.render('about');
 });

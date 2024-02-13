@@ -1,5 +1,8 @@
 const express = require("express");
+const path = require("path")
 const app = express();
+
+const PORT = 3000;
 
 // app.post   //CREATE html
 // app.get    //READ html
@@ -12,4 +15,23 @@ app.get("/", (request, response) => {
     response.send("the route for the sites root /.")
 })
 
-app.listen(3000)
+app.get('/html', (request, response) => {
+    const filePath = path.join(__dirname, 'views/index.html');
+    response.sendFile(filePath);
+})
+
+app.get('/web', (request, response) => {
+	response.status(200).send('<h1>Hello World</h1>')
+})
+
+app.get('/text', (request, response) => {
+        response.status(200).send('plain old text.')
+})
+
+app.get('/json', (request, response) => {
+    response.status(200).json({school: 'Keyin College', program: 'software development'})
+})
+
+app.listen(PORT, () => {
+    console.log(`Simple app running on port ${PORT}.`)
+});
